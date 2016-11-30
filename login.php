@@ -32,17 +32,17 @@
         
     <div class = "container">
       
-         <form class = "form-signin" role = "form" 
+         <form role = "form" 
             action = "<?php echo htmlspecialchars($_SERVER['PHP_SELF']); 
             ?>" method = "post">
-            <h4 class = "form-signin-heading"><?php echo $msg; ?></h4>
-            <input type = "text" class = "form-control" 
-               name = "email" placeholder = "email = kd@kd.com" 
-               required autofocus></br>
-            <input type = "password" class = "form-control"
-               name = "password" placeholder = "password = 01234567" required>
-            <button class = "btn btn-lg btn-primary btn-block" type = "submit" 
-               name = "login">Login</button>
+            <h4><?php echo $msg; ?></h4>
+            <p>E-mail:</p>
+            <input type = "text" name = "email" placeholder = "kd@kd.com" required autofocus>
+             <br/>
+            <p>Password:</p>
+            <input type = "password" name = "password" placeholder = "01234567" required>
+            <br /><br />
+            <button type = "submit" name = "login">Login</button>
          </form>
     
         </div> 

@@ -4,12 +4,12 @@
     
     $answer = trim($answer);
 
-     if (!isset($answer)) {
+     if (!isset($answer) || empty($answer)) {
          $_SESSION['message'] = "<span style='color: red;'>Field cannot be empty</span>";
          header("Location: index2.php"); 
          die();
      }
-     
+    else
     if (!is_numeric($answer)) {
         $_SESSION['message'] = "<span style='color: red;'>You need to enter a number</span>";
         header("Location: index2.php"); 
@@ -19,12 +19,14 @@
 ?>
         <h3>Correct:</h3>
         <?php
-    if ($answer == $_SESSION['sum'] || $answer ==$_SESSION['difference']){
+    if (($_SESSION['operator'] == "+" && answer == $_SESSION['sum'])
+     || ($_SESSION['operator'] == "-" && $answer ==$_SESSION['difference'])) {
         $_SESSION['correct']++;
         $_SESSION['total']++;
     }
     else {
         $_SESSION['message'] = "<span style='color: red;'>You got it wrong</span>";
+        $_SESSION['total']++;
     }
     header("Location: index2.php"); 
 ?>
