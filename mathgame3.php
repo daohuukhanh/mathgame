@@ -14,9 +14,9 @@ $_SESSION['difference'] = $_SESSION['a'] - $_SESSION['b'];
            $_SESSION['operator'] = "-";
            
         } 
-echo $_SESSION['a'] . " " . $_SESSION['operator'] . " " . $_SESSION['b'] ;    
+    echo $_SESSION['a'] . " " . $_SESSION['operator'] . " " . $_SESSION['b'] ; 
 ?>
-        <form role="form" action="mathgame.php" method="post">
+        <form role="form" action="mathgame2.php" method="post">
             <input type="text" name="answer" size="30" placeholder="Enter answer" />
             <br />
             <br />
